@@ -1,0 +1,13 @@
+.Dropdown-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 10px;
+  column-gap: 12px;
+  color: #202124;
+
+  &:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+  }
+}

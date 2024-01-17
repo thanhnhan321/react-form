@@ -1,0 +1,90 @@
+.Paragraph-input {
+  margin-top: 15px;
+  height: 30px;
+  width: 98%;
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  background-color: transparent;
+  color: #495057;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+  user-select: none;
+}
+
+.Multiple-input-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Multiple-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.Multiple-input-text,
+.Inactive-multiple-input-text {
+  margin-left: 10px;
+  height: 30px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid transparent;
+  color: #202124;
+  font-size: 14px;
+  outline: none;
+}
+
+.Add-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Add-option-text {
+  margin-left: 10px;
+  height: 30px;
+  width: 70px;
+  border: none;
+  border-bottom: 1px solid transparent;
+  color: #495057;
+  font-size: 14px;
+  outline: none;
+}
+
+.Multiple-input-text:hover,
+.Add-option-text:hover {
+  border-bottom: 1px solid #ced4da;
+}
+
+.Multiple-input-text:focus {
+  border-bottom: 2px solid #475b6a;
+}
+
+.Remove-icon {
+  display: flex;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e9ecf0;
+  }
+}
+
+.Placeholder-icon {
+  display: flex;
+  padding: 17px;
+  margin-top: 10px;
+}
+
+.Dropdown-text-index {
+  font-size: 16px;
+  color: #202124;
+  padding-bottom: 4px;
+  margin-right: 6px;
+  user-select: none;
+}

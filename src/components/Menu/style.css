@@ -1,0 +1,46 @@
+.menu-container {
+  width: 100%;
+}
+
+.horizontal-menu {
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #374957;
+}
+
+.horizontal-menu li:last-child {
+  margin-right: 0;
+}
+
+.menu-item {
+  margin-right: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: white;
+  min-width: 90px;
+  height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu-link:hover {
+  border: 2px solid white;
+}
+
+.label {
+  line-height: 5px;
+}

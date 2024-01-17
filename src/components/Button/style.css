@@ -1,0 +1,27 @@
+.Button-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 8px;
+  border: 1px solid rgba(204, 204, 204, 0.8);
+  background-color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.Button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 14px;
+  border: 1px solid #6366f1;
+  background: #6366f1;
+  cursor: pointer;
+  width: 100%;
+}
+
+.Label {
+  flex-grow: 1;
+}

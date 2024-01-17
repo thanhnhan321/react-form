@@ -1,0 +1,13 @@
+.Not-found {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eff3fa;
+}
+
+.Image-not-found {
+  width: 50%;
+  height: 50%;
+}

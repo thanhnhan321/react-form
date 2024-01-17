@@ -1,0 +1,23 @@
+.Modal-container {
+  padding: 21px;
+}
+
+.Modal-Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.Modal-Icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e9ecf0;
+  }
+}

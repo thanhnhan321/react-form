@@ -1,0 +1,181 @@
+.Form-container {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 75vh;
+  overflow: auto;
+}
+
+.Item-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+}
+
+.Question,
+.Title-container {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  width: 70vw;
+  min-height: 90px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  transition: min-height 0.5s ease-in-out;
+}
+
+.Question {
+  padding: 0px 20px 20px 20px;
+}
+
+.Drag-icon {
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: move;
+  }
+}
+
+.Inactive-drag-icon {
+  height: 24px;
+}
+
+.active {
+  box-shadow: 6px 0 0 #4285f4 inset, 0 2px 4px rgba(0, 0, 0, 0.2);
+  min-height: 120px;
+}
+
+.Title-container {
+  border-top: 10px solid #627c90;
+  padding: 20px;
+}
+
+.Title-container-title,
+.Title-container-description {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  color: #202124;
+}
+
+.Active-title-container {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid #ced4da;
+  color: #202124;
+
+  &:focus {
+    border-bottom: 2px solid #475b6a;
+  }
+}
+
+.Title-container-title {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.Title-container-description {
+  font-size: 15px;
+}
+
+.Question-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Question-title {
+  height: 20px;
+  width: 100%;
+  padding: 16px;
+  border: none;
+  outline: none;
+  background-color: #f8f9fb;
+  border-bottom: 1px solid #80868d;
+  color: #202124;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #f1f3f5;
+  }
+}
+
+.Question-title:focus {
+  border-bottom: 1px solid #475b6a; /* Keep the original border */
+  box-shadow: 0 -1px 0 #475b6a inset;
+}
+
+.Add-image-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-inline: 15px;
+
+  &:hover {
+    background-color: #e9ecf0;
+  }
+}
+
+.Question-main,
+.Inactive-question-main {
+  background-color: transparent;
+}
+
+.Question-main {
+  margin-bottom: 20px;
+}
+
+.Question-footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.Delete-icon,
+.Duplicate-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e9ecf0;
+  }
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b9bdbf;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #787a7c;
+}

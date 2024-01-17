@@ -1,0 +1,15 @@
+/* src/About.css */
+.about-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #eff3fa;
+}
+
+.about-container h2 {
+  color: #333;
+}
+
+.about-container p {
+  line-height: 1.5;
+}

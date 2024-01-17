@@ -1,0 +1,38 @@
+.Home-main {
+  display: flex;
+  min-height: 88.8vh;
+  flex-direction: column;
+  background-color: #e7ecef;
+}
+
+.Form-header {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 150px;
+}
+
+.Form-title {
+  width: 300px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  font-size: 30px;
+  font-weight: 500;
+  color: #202125;
+
+  &:focus {
+    border-bottom: 1px solid #202125;
+  }
+}
+
+.Button-send {
+  display: flex;
+  width: 110px;
+  height: 40px;
+  user-select: none;
+}

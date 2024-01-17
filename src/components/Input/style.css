@@ -1,0 +1,46 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
+}
+
+.Form-required {
+  color: red;
+}
+
+.Input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding-right: 10.5px;
+  margin-bottom: 4px;
+
+  &:hover {
+    border: 1px solid #6366f1;
+  }
+}
+
+.Input {
+  width: 100%;
+  padding: 10.5px;
+  border-width: 0px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #495057;
+  font-size: 14px;
+  outline: none;
+}
+
+.Icon {
+  background-color: transparent;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
