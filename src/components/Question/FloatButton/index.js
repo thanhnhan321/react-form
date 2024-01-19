@@ -26,10 +26,6 @@ const FloatButton = ({ field, addQuestion, style }) => {
         {/* Render icon thêm câu hỏi */}
         <AddIcon />
       </div>
-      <div className="Icon-image" title="Add image" onClick={handleAddImage}>
-        {/* Render icon thêm ảnh */}
-        <ImageIcon />
-      </div>
     </div>
   );
 };

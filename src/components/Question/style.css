@@ -179,3 +179,15 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #787a7c;
 }
+
+
+/* Viết thêm */
+.Image-container {
+  margin-top: 10px; /* điều chỉnh khoảng cách từ hình ảnh đến các phần khác */
+  text-align: center; /* căn giữa hình ảnh */
+}
+
+.Image-container img {
+  max-width: 50%; /* hình ảnh sẽ không vượt quá chiều rộng của container */
+  height: auto; /* giữ tỷ lệ khung hình khi thay đổi kích thước màn hình */
+}

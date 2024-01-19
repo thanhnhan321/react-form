@@ -15,3 +15,4 @@ export { default as Question } from "./Question";
 export { default as Switch } from "./Switch";
 export { default as OptionInput } from "./Question/OptionInput";
 export { default as FloatButton } from "./Question/FloatButton";
+export { default as SignUp } from "./SignUp";
