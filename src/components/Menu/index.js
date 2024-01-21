@@ -13,21 +13,21 @@ const Menu = () => {
   ];
 
   return (
-    <div className="menu-container">
-      <ul className="horizontal-menu">
-        {/* sử dụng hàm map để lặp qua mảng menuItems và tạo ra các phần tử <li> tương ứng cho mỗi mục trong menu. */}
-        {menuItems.map((menuItem, index) => (
-          <li key={index} className="menu-item">
-            <Link to={menuItem.path} className="menu-link">
-              {menuItem.icon}
-              <Text size={18} color={"white"} fontWeight={400} cursor={"pointer"}>
-                {menuItem.label}
-              </Text>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+      <div className="menu-container">
+        <ul className="horizontal-menu">
+          {/* sử dụng hàm map để lặp qua mảng menuItems và tạo ra các phần tử <li> tương ứng cho mỗi mục trong menu. */}
+          {menuItems.map((menuItem, index) => (
+            <li key={index} className="menu-item">
+              <Link to={menuItem.path} className="menu-link">
+                {menuItem.icon}
+                <Text size={18} color={"white"} fontWeight={400} cursor={"pointer"}>
+                  {menuItem.label}
+                </Text>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
   );
 };
 

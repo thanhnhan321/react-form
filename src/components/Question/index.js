@@ -104,120 +104,120 @@ const Question = ({
   };
 
   return (
-    <div className="Form-container" onScroll={handleScroll}>
-      {formContent.map((field) => (
-        <div key={field.itemID} className="Item-container">
-          {field.type === "form-title" ? (
-            <div
-              className={`Title-container ${activeItemID === field.itemID ? "active" : ""}`}
-              onClick={(event) => handleItemClick(field.itemID, event)}
-              ref={activeItemID === field.itemID ? questionRef : null}
-            >
-              <input
-                value={field.title}
-                placeholder="Form title"
-                className={
-                  activeItemID === field.itemID
-                    ? "Active-title-container Title-container-title"
-                    : "Title-container-title"
-                }
-                onChange={(event) => handleTitleChange(event, field.itemID)}
-              />
-              <input
-                value={field.description}
-                placeholder="Form description"
-                className={
-                  activeItemID === field.itemID
-                    ? "Active-title-container Title-container-description"
-                    : "Title-container-description"
-                }
-                onChange={(event) => handleDescriptionChange(event, field.itemID)}
-              />
-            </div>
-          ) : (
-            <div
-              className={`Question ${activeItemID === field.itemID ? "active" : ""}`}
-              onClick={(event) => handleItemClick(field.itemID, event)}
-              onMouseEnter={() => handleItemHover(field.itemID)}
-              onMouseLeave={() => handleItemHover(null)}
-              ref={activeItemID === field.itemID ? questionRef : null}
-            >
-              {activeItemID === field.itemID || isHover === field.itemID ? (
-                <div className="Drag-icon">
-                  <DragIcon />
-                </div>
-              ) : (
-                <div className="Inactive-drag-icon" />
-              )}
-
-              {activeItemID !== field.itemID ? (
-                <Text size={18} color="#202124" fontWeight={400}>
-                  {field.title}
-                </Text>
-              ) : (
-                <div className="Question-header">
-                  <input
-                    placeholder="Question"
-                    value={field.title}
-                    className="Question-title"
-                    onChange={(event) => handleTitleChange(event, field.itemID)}
-                    onFocus={(event) => event.target.select()}
-                  />
-                  <div className="Add-image-icon" onClick={() => handleChooseFile(field.itemID)}>
-                    <ImageIcon />
-                    <input
-                      type="file"
-                      onChange={(e) => handlePreviewAvartar(e, field.itemID)}
-                      style={{ display: "none" }}
-                      ref={fileInputRef}
-                    />
-                  </div>
-                  <Dropdown
-                    onChange={(selectedOption) => handleTypeChange(field.itemID, selectedOption)}
-                  />
-                </div>
-              )}
-
-                  <div className="Image-container">
-                    {avatars[field.itemID] && <img src={avatars[field.itemID].prevew} alt="" />}
-                  </div>
-
-
+      <div className="Form-container" onScroll={handleScroll}>
+        {formContent.map((field) => (
+          <div key={field.itemID} className="Item-container">
+            {field.type === "form-title" ? (
               <div
-                className={activeItemID === field.itemID ? "Question-main" : "Inactive-question-main"}
+                className={`Title-container ${activeItemID === field.itemID ? "active" : ""}`}
+                onClick={(event) => handleItemClick(field.itemID, event)}
+                ref={activeItemID === field.itemID ? questionRef : null}
               >
-                <OptionInput
-                  field={field}
-                  isActive={activeItemID}
-                  addOption={addOption}
-                  removeOption={removeOption}
-                  changeTextOption={changeTextOption}
+                <input
+                  value={field.title}
+                  placeholder="Form title"
+                  className={
+                    activeItemID === field.itemID
+                      ? "Active-title-container Title-container-title"
+                      : "Title-container-title"
+                  }
+                  onChange={(event) => handleTitleChange(event, field.itemID)}
+                />
+                <input
+                  value={field.description}
+                  placeholder="Form description"
+                  className={
+                    activeItemID === field.itemID
+                      ? "Active-title-container Title-container-description"
+                      : "Title-container-description"
+                  }
+                  onChange={(event) => handleDescriptionChange(event, field.itemID)}
                 />
               </div>
-
-              {activeItemID === field.itemID && (
-                <>
-                  <div className="Question-footer">
-                    <div className="Duplicate-icon" onClick={() => handleDuplicate(field)}>
-                      <CopyIcon />
-                    </div>
-                    <div className="Delete-icon" onClick={() => handleRemoveQuestion(field.itemID)}>
-                      <BinIcon />
-                    </div>
-                    <Line height={32} width={1} />
-                    <Switch label="Required" itemID={field.itemID} changeRequired={changeRequired} />
+            ) : (
+              <div
+                className={`Question ${activeItemID === field.itemID ? "active" : ""}`}
+                onClick={(event) => handleItemClick(field.itemID, event)}
+                onMouseEnter={() => handleItemHover(field.itemID)}
+                onMouseLeave={() => handleItemHover(null)}
+                ref={activeItemID === field.itemID ? questionRef : null}
+              >
+                {activeItemID === field.itemID || isHover === field.itemID ? (
+                  <div className="Drag-icon">
+                    <DragIcon />
                   </div>
-                </>
-              )}
-            </div>
-          )}
+                ) : (
+                  <div className="Inactive-drag-icon" />
+                )}
 
-          {activeItemID === field.itemID && (
-            <FloatButton field={field} addQuestion={addQuestion} style={{ top: buttonTop }} />
-          )}
-        </div>
-      ))}
-    </div>
+                {activeItemID !== field.itemID ? (
+                  <Text size={18} color="#202124" fontWeight={400}>
+                    {field.title}
+                  </Text>
+                ) : (
+                  <div className="Question-header">
+                    <input
+                      placeholder="Question"
+                      value={field.title}
+                      className="Question-title"
+                      onChange={(event) => handleTitleChange(event, field.itemID)}
+                      onFocus={(event) => event.target.select()}
+                    />
+                    <div className="Add-image-icon" onClick={() => handleChooseFile(field.itemID)}>
+                      <ImageIcon />
+                      <input
+                        type="file"
+                        onChange={(e) => handlePreviewAvartar(e, field.itemID)}
+                        style={{ display: "none" }}
+                        ref={fileInputRef}
+                      />
+                    </div>
+                    <Dropdown
+                      onChange={(selectedOption) => handleTypeChange(field.itemID, selectedOption)}
+                    />
+                  </div>
+                )}
+
+                    <div className="Image-container">
+                      {avatars[field.itemID] && <img src={avatars[field.itemID].prevew} alt="" />}
+                    </div>
+
+
+                <div
+                  className={activeItemID === field.itemID ? "Question-main" : "Inactive-question-main"}
+                >
+                  <OptionInput
+                    field={field}
+                    isActive={activeItemID}
+                    addOption={addOption}
+                    removeOption={removeOption}
+                    changeTextOption={changeTextOption}
+                  />
+                </div>
+
+                {activeItemID === field.itemID && (
+                  <>
+                    <div className="Question-footer">
+                      <div className="Duplicate-icon" onClick={() => handleDuplicate(field)}>
+                        <CopyIcon />
+                      </div>
+                      <div className="Delete-icon" onClick={() => handleRemoveQuestion(field.itemID)}>
+                        <BinIcon />
+                      </div>
+                      <Line height={32} width={1} />
+                      <Switch label="Required" itemID={field.itemID} changeRequired={changeRequired} />
+                    </div>
+                  </>
+                )}
+              </div>
+            )}
+
+            {activeItemID === field.itemID && (
+              <FloatButton field={field} addQuestion={addQuestion} style={{ top: buttonTop }} />
+            )}
+          </div>
+        ))}
+      </div>
   );
 };
 
